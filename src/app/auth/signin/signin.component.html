@@ -1,0 +1,36 @@
+<div class="signin-form">
+
+  <form role="form" [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+
+    <mat-card class="signin-card">
+
+      <mat-card-title>Sign in</mat-card-title>
+
+      <mat-card-content>
+
+        <div>
+          <mat-form-field>
+            <input matInput type="email" formControlName="mail" class="form-control" value="" autocomplete="email"
+              placeholder="E-mail">
+          </mat-form-field>
+        </div>
+        <div>
+
+          <mat-form-field>
+            <input matInput type="password" formControlName="password" type="password" autocomplete="off">
+            <mat-placeholder>
+              <mat-icon>lock</mat-icon> Password
+            </mat-placeholder>
+          </mat-form-field>
+
+        </div>
+
+        <div>
+          <button mat-button color="primary" type="submit" [disabled]="!signinForm.valid">
+            <mat-icon>check_circle_outline</mat-icon>&nbsp;Signin
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </form>
+</div>
